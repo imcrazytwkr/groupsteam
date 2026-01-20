@@ -37,3 +37,5 @@ def read_body(response: HTTPResponse) -> Any:
 
 
 __all__ = ["fetch_json"]
+
+assert __name__ != "__main__", "Do no evil"

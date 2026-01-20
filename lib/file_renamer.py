@@ -4,6 +4,7 @@ import re
 
 from .name_provider import NameProvider
 
+# @api: private
 SCREENCAP_RE = re.compile(
     r"^(\d+)_(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})(?:_\d+)?.(jpe?g|png)$",
     re.IGNORECASE,
@@ -90,3 +91,8 @@ class FileRenamer:
             logger.warning(msg)
         else:
             raise ValueError(msg)
+
+
+__all__ = ["FileRenamer"]
+
+assert __name__ != "__main__", "Do no evil"

@@ -10,3 +10,8 @@ def get_path(env_name: str, fallback: Path) -> Path:
     dirpath = Path(value).resolve()
     dirpath.mkdir(exist_ok=True)
     return dirpath
+
+
+__all__ = ["get_path"]
+
+assert __name__ != "__main__", "Do no evil"

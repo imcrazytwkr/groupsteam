@@ -88,3 +88,5 @@ def parse_options(args: list[str]) -> Options:
 
 
 __all__ = ["Options", "parse_options"]
+
+assert __name__ != "__main__", "Do no evil"

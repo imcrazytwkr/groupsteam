@@ -4,6 +4,7 @@ import json
 
 from .http import fetch_json
 
+# @api: private
 STEAM_URL = "https://store.steampowered.com/api/appdetails/"
 
 
@@ -90,3 +91,8 @@ def write_dict(filepath: Path, data: dict[int, str]) -> None:
 
     with open(filepath, "w") as outfile:
         json.dump(data, outfile, ensure_ascii=False, allow_nan=False)
+
+
+__all__ = ["NameProvider"]
+
+assert __name__ != "__main__", "Do no evil"
