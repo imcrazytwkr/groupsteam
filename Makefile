@@ -10,6 +10,6 @@ clean:
 format:
 	find '$(mkfile_dir)' -type f -iname '*.py' -print0 | xargs -0 black
 
-link: format
+link:
 	install -dm755 '$(prefix)/bin'
-	echo -s -T '$(mkfile_dir)/groupsteam.py' '$(prefix)/bin/groupsteam'
+	ln -s -T '$(mkfile_dir)/groupsteam.py' '$(prefix)/bin/groupsteam'
